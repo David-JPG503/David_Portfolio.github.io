@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>David Tran | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <h1>David Tran</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="about" class="section about-section">
+      <img src="/images/Vanlig_bilde.JPG" alt="David Tran" class="profile-photo" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+           I'm a 17 year old student at Kuben upper secondary school, studying media production. <br><br> I have a strong interest in media and graphic design, and I'm skilled in Adobe programs like Photoshop, Illustrator, and Premiere Pro.
+        </p>
+        <p>
+          I enjoy creating silhouette art and play badminton at Haugerud, training twice a week. While I train for fun, I'm also focused on improving my skills. <br><br> I'm a social and friendly person who enjoys connecting with others. The club atmosphere at Haugerud is something I really appreciate.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="new">New</button>
+            <button class="filter-btn" data-filter="old">Old</button>
+        </div>
+
+        <div class="project-grid">
+
+          <div class="project-card" data-project="Pixel arts" data-type="new">
+            <img src="/images/Mutated_Blender_Logo.png" alt="Pixel arts" class="project-image" />
+            <h3>Pixel art</h3>
+            <p>I began creating pixel art for fun at age 15 and have continued doing it to this day.</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+
+          <div class="project-card" data-project="Mavericks" data-type="old">
+            <img src="/images/Mavericks_red.jpg" alt="Mavericks" class="project-image" />
+            <h3>Mavericks</h3>
+            <p>I created logos and a mockup for a fictional company as my first graphic design project given by my teachers in the first year at Kuben upper secondary school.</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+
+          <div class="project-card" data-project="Økern Basket IL" data-type="old">
+            <img src="/images/Designmanual.jpg" alt="Økern Basket IL" class="project-image" />
+            <h3>Økern basket IL</h3>
+            <p>I designed logos, two designmanuals, and mockups for a fictional company as part of a project given by my teachers in my first year at Kuben upper secondary school.</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+
+          <div class="project-card" data-project="Magazine CV" data-type="old">
+            <img src="/images/CV_magasin_forside.png" alt="Magazine CV" class="project-image" />
+            <h3>Magazine CV</h3>
+            <p>In my first year at Kuben upper secondary school, I made my CV in the form of a magazine, reflecting my passion for design and visual communication.</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+
+          <div class="project-card" data-project="Silhouette arts" data-type="old">
+            <img src="/images/Battle cats_uten_min_kallnavn_autograf.jpg" alt="Silhouette arts" class="project-image" />
+            <h3>Silhouette art</h3>
+            <p>I was part of an interest group at Kuben upper secondary school in my first year, where I created silhouette art using Photoshop.</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+
+          <div class="project-card" data-project="ASCII art video" data-type="old">
+            <img src="/images/Skjermbilde 2025-07-19 203112.png" alt="ASCII art video" class="project-image" />
+            <h3>ASCII art video</h3>
+            <p>I was part of an interest group at Kuben upper secondary school in my first year, where I learned how to create an ASCII art using Adobe After Effects.</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+
+          <div class="project-card" data-project="Blender" data-type="old">
+            <img src="/images/Dangerous_chess_blender.png" alt="Blender" class="project-image" />
+            <h3>Blender</h3>
+            <p>When I was around 13 or 14 years old, I got into digital design and used Blender to create two graphic projects featuring my own Roblox avatar.</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+        </div>
+    </section>
+
+    <div id="galleryModal" class="modal" aria-hidden="true">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <button class="modal-prev" aria-label="Previous">&#8592;</button>
+      <button class="modal-next" aria-label="Next">&#8594;</button>
+      <div class="modal-media-container"></div>
+    </div>
+
+
+
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required />
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required />
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone (optional)" />
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" id="submit_btn">Send Message</button>
+        <div id="error-message" style="margin-top: 10px;"></div>
+      </form>
+    </section>
+
+
+  </main>
+  
+    <footer>
+        <div class="container footer-content" 
+          style="display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem; 
+          padding: 2.5rem 1rem; border-top: 1px solid #ffffff; 
+          font-family: Arial, sans-serif; font-size: 1.1rem; color: #ffffff; text-align: center;">
+            
+          <div class="footer-section" style="flex: 1 1 250px; min-width: 250px;">
+            <h4 style="margin-bottom: 0.5rem; color: #ff8c00; font-weight: 700;">Contact</h4>
+            <p style="margin: 0.3rem 0;">Email: datra08@icloud.com</p>
+            <p style="margin: 0.3rem 0;">Phone: +47 463 83 043</p>
+          </div>
+            
+        </div>
+    </footer>
+
+    <div id="galleryModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="Close Gallery">&times;</button>
+        <img src="" alt="Project Screenshot" />
+    </div>
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "laltaW_gXBc0OfhQB",
+        });
+    })();
+    </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
